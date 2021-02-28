@@ -1,0 +1,18 @@
+;; shadow-cljs configuration
+{:builds {:browser {:asset-path "/js",
+                    :build-hooks [(yz.ppp/load-env)],
+                    :devtools {:after-load yz.app/main},
+                    :modules {:main {:entries [yz.app]}},
+                    :output-dir "public/js",
+                    :target :browser},
+          :node {:devtools {:after-load yz.app/main},
+                 :main yz.app/main,
+                 :output-to "node-out/out.js",
+                 :target :node-script},
+          :test {:devtools {:http-port 8021,
+                            :http-root "public-test/js/test"},
+                 :target :browser-test,
+                 :test-dir "public-test/js/test"}},
+ :dependencies [[reagent "0.9.1"]],
+ :dev-http {8080 "public"},
+ :source-paths ["src/dev" "src/main" "src/test"]}

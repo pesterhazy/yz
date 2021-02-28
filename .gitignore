@@ -1,0 +1,5 @@
+node_modules
+.shadow-cljs
+dist
+node-out
+public-test

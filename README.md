@@ -6,6 +6,8 @@ See GeePaw's [series of videos](https://www.geepawhill.org/2020/08/17/real-progr
 
 ## Usage
 
+You'll need `npm` and `java` installed
+
 ```
 scripts/dev
 
